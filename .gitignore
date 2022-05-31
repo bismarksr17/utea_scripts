@@ -9,6 +9,10 @@ api_key/
 *.key
 .ipynb_checkpoints
 */.ipynb_checkpoints/*
+*/planos/*
+*/fotos/*
+*/templates/*
+
 
 
 # IPython
