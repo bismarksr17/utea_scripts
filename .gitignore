@@ -12,6 +12,13 @@ api_key/
 */planos/*
 */fotos/*
 */templates/*
+
+
+*.pdf
+*.jpg
+*.docx
+*.png
+.ipynb_checkpoints/
 client_secrets.json
 
 
