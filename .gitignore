@@ -18,6 +18,7 @@ api_key/
 *.jpg
 *.docx
 *.png
+*.txt
 .ipynb_checkpoints/
 client_secrets.json
 
