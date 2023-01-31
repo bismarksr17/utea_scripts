@@ -17,6 +17,7 @@ api_key/
 *.pdf
 *.jpg
 *.docx
+*.xlsx
 *.png
 *.txt
 .ipynb_checkpoints/
