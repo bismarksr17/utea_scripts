@@ -20,6 +20,13 @@ api_key/
 *.xlsx
 *.png
 *.txt
+*.cpg
+*.dbf
+*.prj
+*.shp
+*.shx
+*.sbx
+*.sbn
 .ipynb_checkpoints/
 client_secrets.json
 
