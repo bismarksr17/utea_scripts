@@ -20,15 +20,23 @@ api_key/
 *.xlsx
 *.png
 *.txt
+<<<<<<< HEAD
 
+=======
+>>>>>>> 812534f4ca518979dc372f13968af43fb0cb52a5
 *.cpg
 *.dbf
 *.prj
 *.shp
 *.shx
+<<<<<<< HEAD
 *.sbn
 *.sbx
 
+=======
+*.sbx
+*.sbn
+>>>>>>> 812534f4ca518979dc372f13968af43fb0cb52a5
 .ipynb_checkpoints/
 client_secrets.json
 
