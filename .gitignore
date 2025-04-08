@@ -1,52 +1,27 @@
-# Created by https://www.toptal.com/developers/gitignore/api/jupyternotebooks
-# Edit at https://www.toptal.com/developers/gitignore?templates=jupyternotebooks
+# Carpeta de checkpoints de Jupyter (archivos temporales)
+.ipynb_checkpoints/
 
-### JupyterNotebooks ###
-# gitignore template for Jupyter Notebooks
-# website: http://jupyter.org/
-
-api_key/
-*.key
-.ipynb_checkpoints
-*/.ipynb_checkpoints/*
-*/planos/*
-*/fotos/*
-*/templates/*
-
-
+# Archivos comunes que no necesitas versionar
 *.pdf
 *.jpg
 *.docx
 *.xlsx
 *.png
 *.txt
-<<<<<<< HEAD
+*.json
 
-=======
->>>>>>> 812534f4ca518979dc372f13968af43fb0cb52a5
+# Archivos GIS (Geographic Information System)
 *.cpg
 *.dbf
 *.prj
 *.shp
 *.shx
-<<<<<<< HEAD
 *.sbn
 *.sbx
 
-=======
-*.sbx
-*.sbn
->>>>>>> 812534f4ca518979dc372f13968af43fb0cb52a5
-.ipynb_checkpoints/
-client_secrets.json
-
-
-
-# IPython
+# Configuración de IPython
 profile_default/
 ipython_config.py
 
-# Remove previous ipynb_checkpoints
-#   git rm -r .ipynb_checkpoints/
-
-# End of https://www.toptal.com/developers/gitignore/api/jupyternotebooks
+# Variables de entorno (NO subir)
+.env
