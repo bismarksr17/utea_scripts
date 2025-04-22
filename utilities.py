@@ -1,5 +1,7 @@
 # creacion de qrs
 import qrcode
+import datetime
+import collections
 
 # windows dialog
 import tkinter as tk
@@ -38,6 +40,71 @@ def generar_qr(content_qr, output_path):
     # retorna la ruta del qr
     return ruta_qr
 
+def convertir_formato_fecha(self, fecha):
+    """
+    Convierte una fecha desde el formato 'YYYY-mm-dd H:M:S+z' al formato 'd/m/YYYY'.
+        
+    Parámetros:
+    -----------
+    fecha : str
+        Fecha en formato string, por ejemplo: '2023-09-15 14:30:00+0000'
+
+    Retorna:
+    --------
+    str
+        Fecha en formato 'dd/mm/YYYY'.
+    Excepciones:
+    ------------
+    ValueError:
+        Si el formato de la fecha no es válido.
+    """
+    try:
+        new_formato = datetime.strptime(fecha, "%Y-%m-%d %H:%M:%S%z").strftime("%d/%m/%Y")
+        return new_formato
+    except ValueError as e:
+        print(f"Error al convertir la fecha: {e}")
+        return None
+
+def convertir_dict_obj(self, diccionario, name):
+    """
+    Convierte un diccionario en un objeto tipo namedtuple.
+    Esta función es útil cuando se desea acceder a los valores del diccionario 
+    como atributos de un objeto en lugar de usar claves.
+    
+    Parámetros:
+    -----------
+    diccionario : dict
+        El diccionario que se desea convertir.
+    
+    name : str
+        Nombre de la clase del objeto que se creará.
+    
+    Retorna:
+    --------
+    namedtuple
+        Objeto con los mismos campos que el diccionario.
+    
+    Ejemplo:
+    --------
+    >>> d = {'id': 1, 'nombre': 'Juan'}
+    >>> obj = convertir_dict_obj(d, 'Usuario')
+    >>> obj.nombre
+    'Juan'
+   
+    Manejo de errores:
+    ------------------
+    - Retorna None si el argumento no es un diccionario válido.
+    """
+    try:
+        if not isinstance(diccionario, dict):
+            raise TypeError("Se esperaba un diccionario como primer parámetro.")
+        if not isinstance(name, str):
+            raise TypeError("El nombre del objeto debe ser una cadena de texto.")
+        return collections.namedtuple(name, diccionario.keys())(*diccionario.values())
+    except Exception as e:
+        print(f"Error al convertir el diccionario a objeto: {e}")
+        return None
+   
 def seleccionar_archivo(titulo, extension):
     """
     Abre un diálogo para seleccionar un archivo con la extensión dada.
