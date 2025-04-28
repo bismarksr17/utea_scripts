@@ -176,7 +176,7 @@ class AmigocloudFunctions:
         try:
             if not isinstance(ancho, (int, float)):
                 raise TypeError("El ancho debe ser un número (int o float).")
-            return docxtpl.InlineImage(docu, image_descriptor=filename, width=Mm(ancho))
+            return InlineImage(docu, image_descriptor=filename, width=Mm(ancho))
         except Exception as e:
             print(f"Error al convertir la imagen '{filename}' a InlineImage: {e}")
             return None

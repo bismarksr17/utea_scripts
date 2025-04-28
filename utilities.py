@@ -1,7 +1,7 @@
 # creacion de qrs
 import qrcode
-import datetime
 import collections
+from datetime import datetime
 
 # windows dialog
 import tkinter as tk
@@ -40,7 +40,7 @@ def generar_qr(content_qr, output_path):
     # retorna la ruta del qr
     return ruta_qr
 
-def convertir_formato_fecha(self, fecha):
+def convertir_formato_fecha(fecha):
     """
     Convierte una fecha desde el formato 'YYYY-mm-dd H:M:S+z' al formato 'd/m/YYYY'.
         
@@ -65,7 +65,7 @@ def convertir_formato_fecha(self, fecha):
         print(f"Error al convertir la fecha: {e}")
         return None
 
-def convertir_dict_obj(self, diccionario, name):
+def convertir_dict_obj(diccionario, name):
     """
     Convierte un diccionario en un objeto tipo namedtuple.
     Esta función es útil cuando se desea acceder a los valores del diccionario 
@@ -104,6 +104,7 @@ def convertir_dict_obj(self, diccionario, name):
     except Exception as e:
         print(f"Error al convertir el diccionario a objeto: {e}")
         return None
+    return None
    
 def seleccionar_archivo(titulo, extension):
     """
